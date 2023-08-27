@@ -28,8 +28,8 @@ public class Ball {
                 double newVy = (-Math.sin(theta));
                 double oldSignX = Math.signum(vx);
                 double oldSignY = Math.signum(vy);
-                this.vx = newVx * (-1.0*oldSignX);
-                this.vy = newVy * (-1.0*oldSignY);
+                this.vx = newVx * (-0.1*oldSignX);
+                this.vy = newVy * (-0.1*oldSignY);
             }
         }
         else if(this.rect.x+this.rect.w <this.lPaddle.x){
@@ -42,8 +42,8 @@ public class Ball {
                 double newVy = (Math.sin(theta));
                 double oldSignX = Math.signum(vx);
                 double oldSignY = Math.signum(vy);
-                this.vx = newVx * (-1.0*oldSignX);
-                this.vy = newVy * (-1.0*oldSignY);
+                this.vx = newVx * (-0.1*oldSignX);
+                this.vy = newVy * (-0.1*oldSignY);
             }
         }
         else if(this.rect.x + this.rect.w > this.rPaddle.x+this.rPaddle.w){
@@ -67,8 +67,8 @@ public class Ball {
             rightScoreText.text = "" + rightScore; 
             this.rect.x = Constants.sWidth /2.0;
             this.rect.y = Constants.sHeight /2.0;
-            this.vy = 0.1;
-            this.vx = -0.25;
+            this.vy = 0.01;
+            this.vx = -0.025;
             if(rightScore>=Constants.winScore){
                 App.changeState(2);
             }
@@ -79,8 +79,8 @@ public class Ball {
             leftScoreText.text = "" + leftScore; 
             this.rect.x = Constants.sWidth /2.0;
             this.rect.y = Constants.sHeight /2.0;
-            this.vy = 0.1;
-            this.vx = -0.25;
+            this.vy = 0.01;
+            this.vx = -0.025;
              if(leftScore>Constants.winScore){
                 App.changeState(2);
             }

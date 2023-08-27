@@ -29,12 +29,12 @@ public class PlayerControl {
     }   
     public void moveUp(double deltaT){
           if(rect.y - deltaT > Constants.tHeight){
-                this.rect.y -= 1*deltaT;
+                this.rect.y -= 0.25*deltaT;
             }
     }
     public void moveDown(double deltaT){
         if((rect.y+deltaT)+ rect.h < Constants.sHeight - Constants.iBottom){
-                this.rect.y += 1*deltaT;
+                this.rect.y += 0.25*deltaT;
             }
     }
 }
